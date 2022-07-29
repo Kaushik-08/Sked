@@ -1,0 +1,27 @@
+<%= image_tag('SKED.png',alt: "", id: "sklog") %>
+<%= image_tag('sgn-img.png',alt: "", id: "sgnim") %>
+
+<%= form_with url:'/users' do |form|%>
+
+<div class="logdiv">
+<div class="inple">
+
+<% if flash[:error]%><p class = "flash-error"><%= flash[:error]%></p><%end%>
+<label><b><p>Full Name</p></b></label>
+<%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="usnam" required >  %>
+<%= form.text_field "user[name]", autofocus: true,id: "usnam" %>
+<label><b><p id="pswd">Email</p></b></label>
+<%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="pasnam" required >  %>
+<%= form.email_field "user[email]", id: "pasnam"%>
+<label><b><p id="dwnps">Password</p></b></label>
+<%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="sinpas" required >  %>
+<%= form.password_field "user[password]", id: "sinpas"%>
+<div class="frmi">
+    <%= form.submit "Signup",  class: "customm-btn btnn-3"%>
+  </div>
+    <b><a id="nxpg" href=""> Login </a></b>
+ <b> <p id="acsin">Already have an account?</p></b>
+
+</div>
+</div>
+ <%end%>

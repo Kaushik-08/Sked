@@ -1,0 +1,405 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+#prim{
+  position: absolute;
+  color: #000;
+  font-size: 40px;
+  margin-top: 14px;
+  margin-left: 950px;
+}
+
+#prim:hover{
+  transform: scale(1);
+  color: #4EBA92;
+}
+  
+  .menu-bar {
+    background-color: rgb(86, 223, 84,0.15);
+    text-align: center;    
+  }
+  
+  .menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #000;
+    margin-right: 350px;
+  }
+  
+  .menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 5px;
+  }
+  
+  .menu-bar ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .active,
+  .menu-bar ul li:hover {
+    background: rgb(86, 223, 84,0.20);
+    border-radius: 3px;
+  }
+  .sub-menu-1 {
+    display: none;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(86, 223, 84,0.20);
+    margin-top: 5px;
+    margin-left: -5px;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 3px;
+    background: transparent;
+    border-radius: 0px;
+  }
+  
+  .sub-menu-2 {
+    display: none;
+  }
+  
+  .hover-me:hover .sub-menu-2 {
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 150px;
+    background: rgb(86, 223, 84,0.20);
+  }
+
+  #skd{
+    position: absolute;
+    height: 30px;
+    margin-top: 15px;
+    left: 9%;
+  }
+
+  #tskim{
+    margin-left: 60%;
+    height: 30%;
+    width: 30%;
+    margin-top: 8%;
+    right: 10%;
+  }
+
+  #bgtx{
+    position: absolute;
+    margin-top: 10%;
+    left: 9%;
+    font-size: 600%;
+    color: #4EBA92;
+  }
+
+  #lngtx{
+    position: absolute;
+    color: #000000;
+    width: 30%;
+    margin-top: 19%;
+    left: 9.3%;  
+    font-size: 200%;
+  }
+
+  /* @media only screen and (max-width: 768px) {
+    #lngtx {
+      width: 90%;
+      height: 5vh;
+    }
+  } */
+
+  #littx{
+    position: absolute;
+    margin-top: 26%;
+    left: 9.5%;
+    color: #979696;
+  }
+
+   .frame {
+    width: 90%;
+    margin: 40px auto;
+    position: absolute;
+    left: 8%;
+    margin-top: 450px;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .btn-3 {
+    background:#4EBA92;
+  background: #4EBA92;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    
+  }
+  .btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-3:before,
+  .btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+     background:rgb(86, 223, 84,0.15);
+    transition: all 0.3s ease;
+  }
+  .btn-3:before {
+    height: 0%;
+    width: 2px;
+  }
+  .btn-3:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3:hover{
+     background: transparent;
+    box-shadow: none;
+  }
+  .btn-3:hover:before {
+    height: 100%;
+  }
+  .btn-3:hover:after {
+    width: 100%;
+  }
+  .btn-3 span:hover{
+     color: #000;
+  }
+  .btn-3 span:before,
+  .btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+     background: #4EBA92;
+    transition: all 0.3s ease;
+  }
+  .btn-3 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-3 span:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-3 span:hover:before {
+    height: 100%;
+  }
+  .btn-3 span:hover:after {
+    width: 100%;
+  }
+
+#nxtx{
+  position: absolute;
+  font-size: 230%;
+  color: #000000;
+  margin-left: 370PX;
+  margin-top: 150PX;
+}
+
+ #cstx{
+  color: #979696;
+  position: absolute;
+  margin-left: 480PX;
+  margin-top: 240px;
+ }
+
+#vid{
+  position: absolute;
+  height: 380px;
+  width: 630px;
+  margin-top: 23%;
+  margin-left: 440px;
+}
+#vidvd{
+  height: 380px;
+  width: 630px;
+  border-radius: 200px;
+  position: absolute;
+}
+
+#fot{
+  position: absolute;
+  background-color: #063021;
+  width: 100%;
+  height: 200px;
+  margin-top: 900px;
+
+}
+
+
+#shvid{
+ position: absolute;
+ right: 8%;
+ height: 500px;
+ width: 500px;
+ margin-top: 900px;
+}
+
+#skimg{
+  position: absolute;
+  height: 60px;
+  left: 9%;
+  margin-top: 50px;
+}
+
+#fabt{
+  color: #fff;
+  margin-left: 500px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#faco{
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 800px;
+}
+
+#abwrd{
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  margin-left: 500px;
+  margin-top: 10px;
+  width: 150px;
+}
+
+#ctwr{
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  margin-left: 800px;
+  margin-top: 10px;
+  width: 150px;
+}
+
+#lne{
+  margin-top: 100px;
+}
+
+#prvc{
+  position: absolute;
+  color: #fff;
+  margin-left: 500px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#cprt{
+  position: absolute;
+  color: #fff;
+  margin-left: 800px;
+  margin-top: 10px;
+  font-size: 15px;
+
+}
+
+#inim{
+  position: absolute;
+  height: 40px;
+}
+
+i{
+  color: #fff;
+  font-size: 20px;
+  margin-right: 50px;
+  margin-top: 10px;
+
+}
+
+i:hover{
+  transform: scale(1);
+  color: #4EBA92;
+}
+
+.socbx{
+  float: right;
+  /* pointer-events: none; */
+  
+}
+
+.container{
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 10px;
+}
+
+.search-bar{
+  height: 40px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  border-radius: 60px;
+  background: #4EBA92;
+  align-items: center;
+  display: flex;
+  padding: 10px 20px;
+}
+
+.search-bar input::placeholder{
+  color: #ffff;
+}
+
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 30px 20px;
+  font-size: 15px;
+}
+
+.search-bar button{
+  background: inherit;
+  border-radius: 50%;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+
