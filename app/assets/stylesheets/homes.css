@@ -316,9 +316,11 @@
   width: 150px;
 }
 
-#lne{
+#indln{
   margin-top: 100px;
 }
+
+
 
 #prvc{
   position: absolute;
@@ -340,6 +342,7 @@
 #inim{
   position: absolute;
   height: 40px;
+
 }
 
 i{
@@ -357,6 +360,7 @@ i:hover{
 
 .socbx{
   float: right;
+  background-color: #fff;
   /* pointer-events: none; */
   
 }

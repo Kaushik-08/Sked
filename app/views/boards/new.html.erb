@@ -83,7 +83,17 @@
         </p></b>
        <a href=""> <i class='bx bx-x' id="clsic"></i> </a>
         <hr id="lne">
-            <form action="/boards" method="post" enctype="multipart/form-data">
+        <b><p id="bgim">
+          Background
+        </p></b>
+        <%= image_tag('markt-img.avif',alt: "", id: "marim") %>
+        <%= image_tag('pro-img.avif',alt: "", id: "proim") %>
+        <%= image_tag('desg-img.avif',alt: "", id: "dsgim") %>
+        <%= image_tag('test-img.avif',alt: "", id: "tstim") %>
+        <%= image_tag('autma-img.avif',alt: "", id: "atoim") %>
+        <%= image_tag('devp-img.avif',alt: "", id: "dvpim") %>
+
+            <form action="/boards" method="post" enctype="multipart/form-data" id="hlo">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
             <input type="file" name="board[cover_picture]">
             <button type="submit">Submit</button>

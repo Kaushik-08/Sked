@@ -245,3 +245,41 @@ nav ul ul li a{
 #lne{
    margin-top: 5px;
 }
+
+#marim{
+    /* position: absolute; */
+    width: 45px;
+}
+
+#proim{
+    /* position: absolute; */
+    width: 50px;
+}
+
+#dsgim{
+    /* position: absolute; */
+    width: 49px;
+}
+
+#tstim{
+    /* position: absolute; */
+    width: 50px;
+}
+
+#atoim{
+    /* position: absolute; */
+    width: 50px;
+}
+
+#dvpim{
+    /* position: absolute; */
+    width: 46px;
+}
+
+#bgim{
+    color: rgba(0, 0, 0, 0.842);
+}
+
+#hlo{
+    margin-top: 10px;
+}
