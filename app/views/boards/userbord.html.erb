@@ -1,5 +1,70 @@
-<div>
-    <% @bo.each do |record| %>
-    <%end%>
-        <%= image_tag @bo.last.cover_picture %>
-</div>
+<div class="widget center">
+        <div class="blur"></div>
+        <div class="text center">
+                <%= image_tag( @bg_image,class: "bimg")%>
+
+        </div>
+      </div>
+
+
+    <div class="nav_blur">
+
+        <%= image_tag('SKED.png',alt: "", id: "brdim") %>
+
+        <div class="nav_lst">
+            <b><a id="nav_wrd"> Starred </a></b>
+            <b><a id="nav_scwrd"> Templates </a></b>
+            <button id="crt_bttn"><b>  Create </b></button>
+            <i class='bx bx-bell' id="not_icm"></i>
+            <i id="prfic" class='bx bx-user-pin'></i>
+        </div>
+    </div>  
+
+
+    <div class="dragdrp">
+    
+       <!-- modal -->
+   <div class="modal" id="todo_form">
+    <div class="header">
+      <div class="title">Assign Tassk</div>
+      <button type="button" class="btn close-modal">&times;</button>
+    </div>
+    <div class="body">
+    <form action="/new_task/<%= params[:id] %>" method="post">
+            <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
+
+      <input type="text" name="task" id="todo_input" placeholder="Enter Task" />
+      <input type="submit" value="Add Task" id="todo_submit" title="Add Todo" />
+    </form>  
+    </div>
+  </div>
+  <!-- todo -->
+  <div class="todo-container">
+    <div class="status" id="no_status">
+      <h1>No Status</h1>
+      <% @hi.each do |hi| %>
+      <div class="todo" draggable="true" id="1">
+        <%= hi.task %><span class="close">×</span></div>
+      <% end %>
+      <button type="button" id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
+
+    </div>
+    <div class="status" id="not_started">
+      <h1>Not Started</h1>
+    </div>
+    <div class="status" id="in_progress">
+      <h1>In Progress</h1>
+       
+    </div>
+    <div class="status" id="completed">
+      <h1>Completed</h1>
+      
+    </div>
+  </div>
+
+  <div id="overlay">hello</div>
+
+    </div>
+
+
+ <%= javascript_pack_tag 'board' %> 

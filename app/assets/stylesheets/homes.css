@@ -10,12 +10,21 @@
 #prim{
   position: absolute;
   color: #000;
-  font-size: 40px;
-  margin-top: 14px;
+  font-size: 35px;
+  margin-top: 16px;
   margin-left: 950px;
 }
 
 #prim:hover{
+  transform: scale(1);
+  color: #4EBA92;
+}
+
+#inic{
+  color: #fff;
+}
+
+#inic:hover{
   transform: scale(1);
   color: #4EBA92;
 }
@@ -360,7 +369,7 @@ i:hover{
 
 .socbx{
   float: right;
-  background-color: #fff;
+  /* background-color: #fff; */
   /* pointer-events: none; */
   
 }

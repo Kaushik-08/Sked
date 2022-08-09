@@ -283,3 +283,36 @@ nav ul ul li a{
 #hlo{
     margin-top: 10px;
 }
+
+#marrdo{
+    position: absolute;
+
+}
+
+#prordo{
+    position: absolute;
+}
+
+#desgrdo{
+    position: absolute;
+}
+
+#testrdo{
+    position: absolute;
+}
+
+#autmardo{
+    position: absolute;
+}
+
+#devprdo{
+    position: absolute;
+    margin-left: -261px;
+    margin-top: 42px;
+}
+#popup-div{
+    display: none;
+}
+#create-btn{
+    cursor: pointer;
+}

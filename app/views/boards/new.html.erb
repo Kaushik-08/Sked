@@ -1,5 +1,5 @@
 <div class="menu-bar">
-   <a href="/signin"> <i id="prim" class='bx bx-user-pin'></i></a>
+
     <%= image_tag('SKED.png',alt: "", id: "skd") %>
     <div class="container">
       <form class="search-bar">
@@ -7,6 +7,10 @@
           <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
   </button>
       </form>
+
+       <% logged_user = User.find(session[:current_user_id]) %>
+  <i id="prim" class='bx bx-user-pin'></i>
+          <label class="user-name"><%= logged_user["name"] %></label>
   </div>
       <ul>
         <li>
@@ -76,23 +80,33 @@
         </ul>
     </nav>
 
-        <div class="brodv">
+        <div class="brodv" id="popup-div">
        
         <b><p id="crtbor">
             Create board   
         </p></b>
-       <a href=""> <i class='bx bx-x' id="clsic"></i> </a>
+       <a id="close-btn" > <i class='bx bx-x' id="clsic"></i> </a>
         <hr id="lne">
-        <b><p id="bgim">
-          Background
-        </p></b>
-        <%= image_tag('markt-img.avif',alt: "", id: "marim") %>
-        <%= image_tag('pro-img.avif',alt: "", id: "proim") %>
-        <%= image_tag('desg-img.avif',alt: "", id: "dsgim") %>
-        <%= image_tag('test-img.avif',alt: "", id: "tstim") %>
-        <%= image_tag('autma-img.avif',alt: "", id: "atoim") %>
-        <%= image_tag('devp-img.avif',alt: "", id: "dvpim") %>
-
+        <form action="/background" method="post">
+            <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
+          <b><p id="bgim">
+            Background
+          </p></b>
+          <input id="marrdo" type="radio" name="bg" value="Marketing">
+          <%= image_tag('Marketing.jpg',alt: "", id: "marim") %>
+          <input id="prordo" type="radio" name="bg" value="programer">
+          <%= image_tag('programer.jpg',alt: "", id: "proim") %>
+          <input id="desgrdo" type="radio" name="bg" value="design">
+          <%= image_tag('Design.jpg',alt: "", id: "dsgim") %>
+          <input id="testrdo" type="radio" name="bg" value="testing">
+          <%= image_tag('Testing.jpg',alt: "", id: "tstim") %>
+          <input id="autmardo" type="radio" name="bg" value="automation">
+          <%= image_tag('Autmation.jpg',alt: "", id: "atoim") %>
+          <input id="devprdo" type="radio" name="bg" value="development">
+          <%= image_tag('Devlopment.jpg',alt: "", id: "dvpim") %>
+          <button type="submit">set</button>
+        </form>
+        
             <form action="/boards" method="post" enctype="multipart/form-data" id="hlo">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
             <input type="file" name="board[cover_picture]">
@@ -107,7 +121,7 @@
         <b><p id="lnk">
           Connect
         </p></b>  
-        <a href=""><i id="lnicn" class='bx bx-link'></i><p id="crbrd">
+        <a id="create-btn"><i id="lnicn" class='bx bx-link'></i><p id="crbrd">
           Create a board  
         </p><a>
     </div>  
@@ -117,4 +131,4 @@
 
 
 
- 
+<%= javascript_pack_tag 'new.js' %> 
