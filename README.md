@@ -16,5 +16,5 @@ Whenever I was ready to do my work with the flow but I have no idea what I have 
 7. Search - in-progress
 8. Category - completed
 9. Boards - completed
-10. 10.drag and drop - in-progress
+10.drag and drop - in-progress
 11.blogs - completed
