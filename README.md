@@ -1,5 +1,4 @@
 # SKED
-##dev
 ## What is Sked ?
 Sked is a website which it will work on task assigning and todo works.
 ##Reference product : Trello
