@@ -14,7 +14,7 @@ Whenever I was ready to do my work with the flow but I have no idea what I have 
 4. Members - completed
 5. Inviting Link - completed
 6. Notification - yet to do
-7. Search - in-progress
+7. Search - completed
 8. Category - completed
 9. Boards - completed
 10. drag and drop - in-progress
