@@ -2,7 +2,6 @@
 ##dev
 ## What is Sked ?
 Sked is a website which it will work on task assigning and todo works.
-##Reference product : Trello
 ## Why is Sked ?
 Sked makes it easier for employees and students to check the day to day work with ease, they can pick any board of their comfort, they can invite someone to there board and work together it makes easy everywhere while you are in board for team.
 ## Why did I choose this project ?
