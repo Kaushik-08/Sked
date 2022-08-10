@@ -4,4 +4,8 @@ class HomesController < ApplicationController
     # render 'homes#index'
   end
   
+def search
+  @search = Post.where("title LIKE ?", "%" + params[:q] + "%")
+end
+
 end

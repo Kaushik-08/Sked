@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   post "signin", to: "sessions#create", as: :sessions
   delete "signout", to: "sessions#destroy", as: :destroy_session 
 
+  get 'search', to: 'homes#search'
+
   Rails.application.routes.draw do
     resources :posts do
       member do
