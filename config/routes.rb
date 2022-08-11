@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'boards/new'
   get 'homes/main'
   get 'boards/userbord'
+  get 'homes/views'
   resources :default_images
   match '/boards', to: 'boards#create', via: :post
   # resources :boards

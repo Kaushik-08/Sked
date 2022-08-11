@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <b><%= form.label :title, class:"ttl_"%></b>
+    <%= form.text_field :title , class:"frm_pst"%>
   </div>
 
-    #  use this for one attachment
+    <%# #  use this for one attachment %>
 
  <div class="field">
-   <%= form.label :header_image %>
+   <%= form.label :header_image, class:"" %>
    <%= form.file_field :header_image %>
  </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label :body, class:"" %>
     <%= form.text_area :body %>
   </div>
 
   
- # use this for many attachments, note we need multiple: true
+ <%# # use this for many attachments, note we need multiple: true %>
 
  <div class="field">
-   <%= form.label :files %>
+   <%= form.label :files, class:"" %>
    <%= form.file_field :files, multiple: true %>
  </div>
 
