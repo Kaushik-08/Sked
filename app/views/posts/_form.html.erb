@@ -11,8 +11,13 @@
     </div>
   <% end %>
 
+<div class="pst-div">
+<b><p id="pst-tie">Add Your Post Here</p></b>
+
+<%= image_tag('post-div-img.png',alt: "", id: "pst4-img") %>
+
   <div class="field">
-    <b><%= form.label :title, class:"ttl_"%></b>
+    <b><%= form.label :title, class:"ttl_pst"%></b>
     <%= form.text_field :title , class:"frm_pst"%>
   </div>
 
@@ -40,8 +45,6 @@
     <%= form.submit %>
   </div>
 
-
-
-
+</div>
 
 <% end %>

@@ -8,11 +8,63 @@
     padding: 0;
 }
 
-.frm_pst{
-    margin-left: 600px;
-    margin-top: 100px;
+// .frm_pst{
+//     margin-left: 600px;
+//     margin-top: 100px;
+//     position: absolute;
+// }
+
+// .ttl_pst{
+//     margin-left: 500px;
+//     margin-top: 100px;
+//     position: absolute;
+// }
+
+#pst4-img{
     position: absolute;
+    margin-left: 850px;
+    margin-top: 320px;
+    height: 300px;
 }
 
+.pst-div{
+    position: absolute;
+    background-color: rgba(86, 223, 84, 0.148);
+    width: 1190px;
+    height: 630px;  
+    left: 10%;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.field{
+    margin-left: 170px;
+    margin-top: 60px;
+}
+
+#pst-tie{
+        margin-top: 109px;
+        position: absolute;
+        color: #4EBA92;
+        width: 300px;
+        margin-left: 884px;
+        font-size: 50px;
+}
+
+.ttl_pst{
+    margin-left: 100px;
+    background-color: #4EBA92;
+    position: absolute;
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+
+.frm_pst{
+    margin-top: 70px;
+    position: absolute;
+    height: 30px;
+    margin-left: 200px;
+}
 
 

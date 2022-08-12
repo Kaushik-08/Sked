@@ -30,7 +30,7 @@
       <button type="button" class="btn close-modal">&times;</button>
     </div>
     <div class="body">
-    <form action="/new_task/<%= params[:id] %>" method="post">
+    <form action="/new_task/<%= params[:id] %>" method="post" name="userboard">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
 
       <input type="text" name="task" id="todo_input" placeholder="Enter Task" />
@@ -42,8 +42,8 @@
   <div class="todo-container">
     <div class="status" id="no_status">
       <h1>No Status</h1>
-      <% @hi.each do |hi| %>
-      <div class="todo" draggable="true" id="1">
+      <% @hi.each_with_index do |hi, index| %>
+      <div class="todo" draggable="true" id="item-<%= index %>">
         <%= hi.task %><span class="close">×</span></div>
       <% end %>
       <button type="button" id="add_btn" data-target-modal="#todo_form">+ Add Task</button>

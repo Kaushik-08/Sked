@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
     p '========================================='
     p @bo.first.cover_picture
   end
-
+  
   def create
     # current_user
     @board = Board.new(board_params)

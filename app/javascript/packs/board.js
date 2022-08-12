@@ -57,17 +57,22 @@ function createElem() {
         overlay.classList.remove("active")
 
         newSpan.addEventListener("click", removeHandler)
-        function removeHandler(e) {
-            e.target.parentElement.remove()
-        }
     }
 
     console.log("exiting createElem")
 
 }
 
+$.querySelectorAll('span.close').forEach(item => {
+    item.addEventListener('click', removeHandler);
+})
+
+function removeHandler(e) {
+    e.target.parentElement.remove()
+}
 
 function addTodoElemHandler() {
+    // e.preventDefault();
     createElem()
 
     const todos = $.querySelectorAll('.todo')
@@ -80,35 +85,15 @@ function addTodoElemHandler() {
 addTodoBtn.addEventListener("click", addTodoElemHandler)
 
 
-
-function keydownHandler(e) {
-    if (e.keyCode === 13) {
-        createElem()
-        inputElem.value = ""
-        inputElem.blur()
-
-        const todos = $.querySelectorAll('.todo')
-
-        console.log(todos)
-
-        todos.forEach((todo) => {
-            console.log(todo)
-            todo.addEventListener("dragstart", dragStartHandler)
-            todo.addEventListener('dragend', dragEndHandler);
-        })
-    }
-}
-inputElem.addEventListener("keydown", keydownHandler)
-
-
-
+const todos = $.querySelectorAll('.todo');
+todos.forEach((todo) => {
+    console.log(todo)
+    todo.addEventListener("dragstart", dragStartHandler)
+    todo.addEventListener('dragend', dragEndHandler);
+})
 
 function dragStartHandler(e) {
-    console.log("started dragging");
-    console.log(e.currentTarget.classList);
-    e.currentTarget.classList.add('dragging');
     e.dataTransfer.setData("elemId", e.target.id);
-
 }
 
 function dragEndHandler(e) {
@@ -116,35 +101,28 @@ function dragEndHandler(e) {
 }
 
 statusdrop.forEach(function (status) {
-    console.log(status);
     status.addEventListener('dragenter', dragEnterHandler);
     status.addEventListener('dragleave', dragLeaveHandler);
     status.addEventListener('dragover', dragOverHandler);
     status.addEventListener('drop', dropHandler);
+});
 
-    function dragEnterHandler(e) {
-        // console.log(e.target.innerText);
 
-        e.currentTarget.classList.add('drop');
-    };
+function dragEnterHandler(e) {
+    e.currentTarget.classList.add('drop');
+};
 
-    function dragLeaveHandler(e) {
-        // console.log(e.target);
-        e.currentTarget.classList.remove('drop');
-    };
+function dragLeaveHandler(e) {
+    e.currentTarget.classList.remove('drop');
+};
 
-    function dragOverHandler(e) {
-        // console.log(e.target);
-        e.preventDefault();
-    }
+function dragOverHandler(e) {
+    e.preventDefault();
+}
 
-    function dropHandler(e) {
-        console.log(e.dataTransfer);
-        console.log(e.dataTransfer.getData("id"));
-        e.currentTarget.classList.remove('drop');
-        let targetId = e.dataTransfer.getData("elemId");
-        let targetEl = $.getElementById(targetId);
-        status.append(targetEl);
-        // document.getElementById(status.id).append("value added")
-    }
-})
+function dropHandler(e) {
+    e.currentTarget.classList.remove('drop');
+    let targetId = e.dataTransfer.getData("elemId");
+    let targetEl = $.getElementById(targetId);
+    e.target.append(targetEl);
+}
