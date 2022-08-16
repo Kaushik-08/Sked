@@ -2,15 +2,15 @@
 
     <%= image_tag('SKED.png',alt: "", id: "skd") %>
     <div class="container">
-      <form class="search-bar">
+      <form class="search-bar" role="search" action="/search">
           <input type="text" placeholder="Search" name="q">
           <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
   </button>
       </form>
 
        <% logged_user = User.find(session[:current_user_id]) %>
-  <i id="prim" class='bx bx-user-pin'></i>
-          <label class="user-name"><%= logged_user["name"] %></label>
+  <i id="usicn" class='bx bx-user-pin'></i>
+        <b><label class="user-name"><%= logged_user["name"] %></label></b>
   </div>
       <ul>
         <li>
@@ -89,6 +89,7 @@
         <hr id="lne">
         <form action="/background" method="post">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
+          <div class="brd-div">
           <b><p id="bgim">
             Background
           </p></b>
@@ -104,14 +105,18 @@
           <%= image_tag('Autmation.jpg',alt: "", id: "atoim") %>
           <input id="devprdo" type="radio" name="bg" value="development">
           <%= image_tag('Devlopment.jpg',alt: "", id: "dvpim") %>
-          <button type="submit">set</button>
+          </div>
+          <%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="brd_nam" required > %>
+          <button type="submit" id="brd-btn">set</button>
         </form>
         
+            <div class="aut_img">
             <form action="/boards" method="post" enctype="multipart/form-data" id="hlo">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
             <input type="file" name="board[cover_picture]">
             <button type="submit">Submit</button>
             </form>
+            </div>
         </div>
 
 

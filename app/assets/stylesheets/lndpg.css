@@ -5,6 +5,21 @@
     
 }
 
+#usicn{
+    position: absolute;
+    color: #000;
+    font-size: 35px;
+    margin-top: -35px;
+    margin-left: 233px;
+
+}
+
+.user-name{
+    margin-left: 228px;
+    position: absolute;
+    top: 32px;
+}
+
 .siddv{
     /* background-color: #d0f6cf6e; */
     position: absolute;
@@ -248,67 +263,92 @@ nav ul ul li a{
 
 #marim{
     /* position: absolute; */
-    width: 45px;
+    width: 48px;
+    height: 33px;
+    margin-top: 40px;
 }
 
 #proim{
     /* position: absolute; */
-    width: 50px;
+    width: 48px;
+    height: 33px;
 }
 
 #dsgim{
     /* position: absolute; */
-    width: 49px;
+    width: 48px;
+    height: 33px;
 }
 
 #tstim{
     /* position: absolute; */
-    width: 50px;
+    width: 48px;
+    height: 33px;
 }
 
 #atoim{
     /* position: absolute; */
-    width: 50px;
+    width: 48px;
+    height: 33px;
 }
 
 #dvpim{
     /* position: absolute; */
-    width: 46px;
+    width: 48px;
+    height: 33px;
 }
 
 #bgim{
     color: rgba(0, 0, 0, 0.842);
+    margin-top: 7px;
+    position: absolute;
 }
 
 #hlo{
-    margin-top: 10px;
+    margin-top: 103px;
+    margin-left: 70px;
 }
 
 #marrdo{
     position: absolute;
-
+    cursor: pointer;
+    margin-top: 41px;
+    margin-left: 2px;
 }
 
 #prordo{
     position: absolute;
+    cursor: pointer;
+    margin-top: 41px;
+    margin-left: 2px;
 }
 
 #desgrdo{
     position: absolute;
+    cursor: pointer;
+    margin-top: 41px;
+    margin-left: 2px;
 }
 
 #testrdo{
     position: absolute;
+    cursor: pointer;
+    margin-top: 41px;
+    margin-left: 2px;
 }
 
 #autmardo{
     position: absolute;
+    cursor: pointer;
+    margin-top: 41px;
+    margin-left: 2px;
 }
 
 #devprdo{
     position: absolute;
-    margin-left: -261px;
-    margin-top: 42px;
+    margin-left: -257px;
+    margin-top: 81px;
+    cursor: pointer;
 }
 #popup-div{
     display: none;
@@ -316,3 +356,31 @@ nav ul ul li a{
 #create-btn{
     cursor: pointer;
 }
+
+#brd-btn{
+    margin-left: 55px;
+    margin-top: 401px;
+    position: absolute;
+    width: 200px;
+    height: 28px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #4EBA92;
+    color: #fff;
+}
+
+.brd-div{
+    margin-left: 23px;
+}
+
+#brd_nam{
+    border-radius: 6px;
+    border-style: none;
+    height: 36px;
+    width: 150px;
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 80px;
+}
+

@@ -11,37 +11,37 @@
     </div>
   <% end %>
 
+<div class="pst-div">
+<b><p id="pst-tie">Add Your Post Here</p></b>
+
+<%= image_tag('post-div-img.png',alt: "", id: "pst4-img") %>
+
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <b><%= form.label :title, class:"ttl_pst"%></b>
+    <%= form.text_field :title , class:"frm_pst"%>
   </div>
 
-    #  use this for one attachment
 
  <div class="field">
-   <%= form.label :header_image %>
-   <%= form.file_field :header_image %>
+   <b><%= form.label :header_image, class:"hed_img" %></b>
+   <%= form.file_field :header_image , class:"fle_head" %>
  </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+  <div class="body_fld">
+    <b><%= form.label :body, class:"bod_tx" %></b>
+    <%= form.text_area :body,class:"bd_txt" %>
   </div>
 
   
- # use this for many attachments, note we need multiple: true
-
  <div class="field">
-   <%= form.label :files %>
-   <%= form.file_field :files, multiple: true %>
+   <b><%= form.label :files, class:"fld_inp" %></b>
+   <%= form.file_field :files, multiple: true ,class:"fld_txt"%>
  </div>
 
-  <div class="actions">
+  <div >
     <%= form.submit %>
   </div>
 
-
-
-
+</div>
 
 <% end %>

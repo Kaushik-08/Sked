@@ -1,3 +1,112 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#pst4-img{
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 320px;
+    height: 300px;
+}
+
+.pst-div{
+    position: absolute;
+    background-color: rgba(86, 223, 84, 0.148);
+    width: 1190px;
+    height: 630px;  
+    left: 10%;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.field{
+    margin-left: 30px;
+    margin-top: 40px;
+    background-color: #4EBA92;
+    width: 600px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+#pst-tie{
+        margin-top: 110px;
+        position: absolute;
+        color: #4EBA92;
+        width: 300px;
+        margin-left: 884px;
+        font-size: 50px;
+}
+
+.body_fld{
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: #4EBA92;
+    width: 600px;
+    height: 180px;
+    border-radius: 8px;  
+}
+
+.actions{
+    width: 600px;
+}
+
+.ttl_pst{
+    margin-left: 50px;
+    margin-top: 10px;
+    position: absolute;    
+}
+
+.bd_txt{
+    height: 150px;
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+.frm_pst{
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 100px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+}
+.actions {
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 40px;
+    width: 600px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4EBA92;
+}
+.hed_img{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px;
+}
+.fle_head{
+    margin-left: 180px;
+    margin-top: 13px;
+}
+.bod_tx{
+    margin-left: 50px;
+}
+.fld_inp{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px;
+}
+.fld_txt{
+    margin-left: 100px;
+    margin-top: 13px;
+}
+
+

@@ -1,29 +1,32 @@
-class SessionsController < ApplicationController
-    skip_before_action :ensure_user_logged_in
+# frozen_string_literal: true
 
-  def new
-  end
-  def create 
+class SessionsController < ApplicationController
+  skip_before_action :ensure_user_logged_in
+
+  def new; end
+
+  def create
     user = User.find_by(email: login_params[:email])
-    if user && user.authenticate(login_params[:password])
-        session[:current_user_id] = user.id 
-        
-        redirect_to root_path
-    else 
-    #   flash[:error] = "Your signin attempt was invalid, Please retry."
-    #   redirect_to new_sessions_path
-    flash[:error] = "Your signin attempt was invalid, Please retry."
-    redirect_to '/signin'
+    if user&.authenticate(login_params[:password])
+      session[:current_user_id] = user.id
+
+      redirect_to root_path
+    else
+      #   flash[:error] = "Your signin attempt was invalid, Please retry."
+      #   redirect_to new_sessions_path
+      flash[:error] = 'Your signin attempt was invalid, Please retry.'
+      redirect_to '/signin'
     end
   end
 
   def destroy
     session[:current_user_id] = nil
     @current_user = nil
-    redirect_to "/"
+    redirect_to '/'
   end
 
   private
+
   def login_params
     params.require(:user).permit(:email, :password)
   end

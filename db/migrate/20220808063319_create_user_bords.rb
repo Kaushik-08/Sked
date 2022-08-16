@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateUserBords < ActiveRecord::Migration[6.1]
   def change
     create_table :user_bords do |t|
