@@ -178,7 +178,7 @@
 
   .flash-error{
     position: absolute;
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     width: 600px;
     bottom: 459px;
     right: 1px;
