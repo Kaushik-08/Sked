@@ -9,7 +9,7 @@
     width: 568px;
     font-size: 40px;
     margin-top: 200px;
-    color: rgb(0, 0, 0);
+    color: #000000;
 }
 
 #sectx{
@@ -17,7 +17,6 @@
     position: absolute;
     width: 550px;
     font-size: 23px;
-    /* color: rgba(128, 128, 128, 0.526); */
     margin-top: 340px;
 }
 
@@ -28,7 +27,7 @@
 }
 
 .view_div{
-    background-color:rgb(86, 223, 84,0.15);
+    background-color:#56df5426;
     height: 687px;
 }
 
@@ -41,7 +40,7 @@
 
 #viedo{
     /* position: absolute; */
-    background-color: rgb(86, 223, 84,0.15);
+    background-color: #56df5426;
     height: 350px;
     width: 600px;
     margin-left: 470px;
