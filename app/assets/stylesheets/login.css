@@ -11,7 +11,7 @@
 
 .logdv{
     position: absolute;
-    background-color:rgb(208, 246, 207,0.70);
+    background-color:#d0f6cfb3;
     height: 450px;
     width: 600px;
     margin-left: 460px;
@@ -77,9 +77,9 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+     box-shadow:inset 2px 2px 2px 0px #ffffff80,
+     7px 7px 20px 0px #0000001a,
+     4px 4px 5px 0px #0000001a;
     outline: none;
   }
 
@@ -104,7 +104,7 @@
     content: "";
     right: 0;
     top: 0;
-     background:rgb(86, 223, 84,0.15);
+     background:#56df5426;
     transition: all 0.3s ease;
   }
   .bt-3:before {
@@ -178,7 +178,7 @@
 
   .flash-error{
     position: absolute;
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     width: 600px;
     bottom: 459px;
     right: 1px;

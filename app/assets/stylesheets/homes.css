@@ -30,7 +30,7 @@
 }
   
   .menu-bar {
-    background-color: rgb(86, 223, 84,0.15);
+    background-color: #56df5426;
     text-align: center;    
   }
   
@@ -54,7 +54,7 @@
   
   .active,
   .menu-bar ul li:hover {
-    background: rgb(86, 223, 84,0.20);
+    background: #56df5433;
     border-radius: 3px;
   }
   .sub-menu-1 {
@@ -64,7 +64,7 @@
   .menu-bar ul li:hover .sub-menu-1 {
     display: block;
     position: absolute;
-    background: rgb(86, 223, 84,0.20);
+    background: #56df5433;
     margin-top: 5px;
     margin-left: -5px;
   }
@@ -90,7 +90,7 @@
     display: block;
     margin-top: -40px;
     margin-left: 150px;
-    background: rgb(86, 223, 84,0.20);
+    background: #56df5433;
   }
 
   #skd{
@@ -162,9 +162,9 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+     box-shadow:inset 2px 2px 2px 0px #ffffff80,
+     7px 7px 20px 0px #0000001a,
+     4px 4px 5px 0px #0000001a;
     outline: none;
   }
 
@@ -190,7 +190,7 @@
     content: "";
     right: 0;
     top: 0;
-     background:rgb(86, 223, 84,0.15);
+     background:#56df5426;
     transition: all 0.3s ease;
   }
   .btn-3:before {
