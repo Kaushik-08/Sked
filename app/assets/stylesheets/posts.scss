@@ -8,18 +8,6 @@
     padding: 0;
 }
 
-// .frm_pst{
-//     margin-left: 600px;
-//     margin-top: 100px;
-//     position: absolute;
-// }
-
-// .ttl_pst{
-//     margin-left: 500px;
-//     margin-top: 100px;
-//     position: absolute;
-// }
-
 #pst4-img{
     position: absolute;
     margin-left: 850px;
@@ -38,12 +26,16 @@
 }
 
 .field{
-    margin-left: 170px;
-    margin-top: 60px;
+    margin-left: 30px;
+    margin-top: 40px;
+    background-color: #4EBA92;
+    width: 600px;
+    height: 50px;
+    border-radius: 8px;
 }
 
 #pst-tie{
-        margin-top: 109px;
+        margin-top: 110px;
         position: absolute;
         color: #4EBA92;
         width: 300px;
@@ -51,20 +43,70 @@
         font-size: 50px;
 }
 
-.ttl_pst{
-    margin-left: 100px;
+.body_fld{
+    margin-left: 30px;
+    margin-top: 30px;
     background-color: #4EBA92;
-    position: absolute;
-    margin-top: 70px;
-    font-size: 20px;
+    width: 600px;
+    height: 180px;
+    border-radius: 8px;  
+}
+
+.actions{
+    width: 600px;
+}
+
+.ttl_pst{
+    margin-left: 50px;
+    margin-top: 10px;
+    position: absolute;    
+}
+
+.bd_txt{
+    height: 150px;
+    width: 500px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 
 .frm_pst{
-    margin-top: 70px;
-    position: absolute;
+    margin-top: 10px;
     height: 30px;
-    margin-left: 200px;
+    margin-left: 100px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+}
+.actions {
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 40px;
+    width: 600px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4EBA92;
+}
+.hed_img{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px;
+}
+.fle_head{
+    margin-left: 180px;
+    margin-top: 13px;
+}
+.bod_tx{
+    margin-left: 50px;
+}
+.fld_inp{
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px;
+}
+.fld_txt{
+    margin-left: 100px;
+    margin-top: 13px;
 }
 
 
