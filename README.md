@@ -8,7 +8,7 @@ Sked makes it easier for employees and students to check the day to day work wit
 Whenever I was ready to do my work with the flow but I have no idea what I have assign yesterday, so I felt that my project will give free hands to acces for everyone so I can remember what ever my works and I will go with my flow.
 ## Features
 1. Register/Login - completed
-2. Templates - in-progress
+2. Templates - completed
 3. Highlights - yet to do 
 4. Members - completed
 5. Inviting Link - completed
@@ -16,5 +16,5 @@ Whenever I was ready to do my work with the flow but I have no idea what I have 
 7. Search - completed
 8. Category - completed
 9. Boards - completed
-10. drag and drop - in-progress
+10. drag and drop - completed
 11. blogs - completed
