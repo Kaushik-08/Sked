@@ -35,12 +35,13 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#destroy', as: :destroy_session
 
   get 'search', to: 'homes#search'
+  get '/delete/:id', to: 'boards#destroy'
 
-  Rails.application.routes.draw do
+  get '/:status',to: 'homes#update_status'
     resources :posts do
       member do
         delete :delete_file
-      end
+      
     end
   end
 end
