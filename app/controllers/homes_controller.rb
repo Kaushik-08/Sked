@@ -16,4 +16,11 @@ class HomesController < ApplicationController
   def search
     @search = Post.where('title LIKE ?', "%#{params[:q]}%")
   end
+
+  def update_status
+    board = TaskBoard.find(params[:id])
+    board.status = params[:status]
+    board.save!
+    redirect_to request.referrer
+  end
 end

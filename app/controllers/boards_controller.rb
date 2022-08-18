@@ -31,6 +31,11 @@ class BoardsController < ApplicationController
     end
   end
 
+  def destroy
+    TaskBoard.find(params[:id]).destroy
+    redirect_to request.referrer
+  end
+
   def new_background
     # @d_image = DImage.find_by_value(params[:bg])
     # redirect_to "/background/#{board.id}"
@@ -39,7 +44,16 @@ class BoardsController < ApplicationController
   end
 
   def background
-    @hi = TaskBoard.all
+    @in_progress = TaskBoard.where(status: "in_progress")
+    @not_started = TaskBoard.where(status: "not_started")
+    @no_status = TaskBoard.where(status: "no_status")
+    @completed = TaskBoard.where(status: "completed")
+
+    p '========================================='
+    p '========================================='
+    p '========================================='
+    p @in_progress
+    p @no_status
     @board = UserBord.find(params[:id])
     @tasks = TaskBoard.where(board_id: params[:id])
     p @tasks
@@ -48,7 +62,7 @@ class BoardsController < ApplicationController
   end
 
   def new_task
-    task = TaskBoard.new(task: params[:task], board_id: params[:board_id], user_id: @current_user.id)
+    task = TaskBoard.new(task: params[:task], board_id: params[:board_id], user_id: @current_user.id,status: "no_status")
     if task.save
       redirect_to background_path
     else

@@ -126,6 +126,13 @@ function dropHandler(e) {
     e.currentTarget.classList.remove('drop');
     let targetId = e.dataTransfer.getData("elemId");
     let targetEl = $.getElementById(targetId);
+        if(e.target.getAttribute("id") == "not_started"){
+            location.href = `/not_started?id=${targetId.split("-")[1]}`;
+    }else if(e.target.getAttribute("id") == "completed"){
+            location.href = `/completed?id=${targetId.split("-")[1]}`;        
+    }else if(e.target.getAttribute("id") == "in_progress"){
+            location.href = `/in_progress?id=${targetId.split("-")[1]}`;
+    }
     e.target.append(targetEl);
 }
 
@@ -141,3 +148,12 @@ function open_div(){
 function close_div(){
     popup_div.style.display = 'none';
 }
+
+// function appendTask(status,task,task_id){
+//     console.log("appending");
+//     $(`#${status}`).append(
+//         `<div class="todo" draggable="true" id="item-${task_id}">
+//         <%= ${task} %><span class="close">×</span>
+//       </div>`
+//     )
+// }

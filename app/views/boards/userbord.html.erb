@@ -49,23 +49,51 @@
   <div class="todo-container">
     <div class="status" id="no_status">
       <h1>No Status</h1>
-      <% @hi.each_with_index do |hi, index| %>
-      <div class="todo" draggable="true" id="item-<%= index %>">
-        <%= hi.task %><span class="close">×</span></div>
+      <% if @no_status %>
+      <% @no_status.each do |hi| %>
+          <div class="todo" draggable="true" id="item-<%= hi.id %>">
+            <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
+          </div>
+      <% end %>
       <% end %>
       <button type="button" id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
 
     </div>
     <div class="status" id="not_started">
       <h1>Not Started</h1>
+      <% if @no_status %>
+
+          <% @not_started.each do |hi| %>
+          <div class="todo" draggable="true" id="item-<%= hi.id %>">
+            <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
+          </div>
+          <% end %>
+          <% end %>
+
     </div>
     <div class="status" id="in_progress">
       <h1>In Progress</h1>
-       
+      <% if @no_status %>
+
+          <% @in_progress.each do |hi| %>
+       <div class="todo" draggable="true" id="item-<%= hi.id %>">
+           <a href="/delete/<%= hi.id %>"> <%= hi.task %><span class="close">×</span></a>
+          </div>
+          <% end %>
+          <% end %>
+
+      
     </div>
     <div class="status" id="completed">
       <h1>Completed</h1>
-      
+      <% if @no_status %>
+        <% @completed.each do |hi| %>
+          <div class="todo" draggable="true" id="item-<%= hi.id %>">
+              <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
+          </div>
+          <% end %>
+          <% end %>
+
     </div>
   </div>
 
