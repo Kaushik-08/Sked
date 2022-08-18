@@ -42,6 +42,9 @@
         margin-left: 884px;
         font-size: 50px;
 }
+.sh_img{
+    height: 400px;
+}
 
 .body_fld{
     margin-left: 30px;
@@ -96,6 +99,12 @@
     margin-left: 180px;
     margin-top: 13px;
 }
+.pst_sho{
+    margin-left: 10px;
+    border-radius: 3px;
+    color: #8e8686;
+    padding: 1px 10px;
+}
 .bod_tx{
     margin-left: 50px;
 }
@@ -119,5 +128,209 @@
     cursor: pointer;
     color: #fff;
 }
+#tmp_nam{
+    margin-left: 145px;
+    margin-top: 60px;
+    background-color: #56df5426;
+    width: 600px;
+    height: 70px;
+    padding: 23px ;
+    border-radius: 10px;
+}
+#bdy_txt{
+    background-color: #56df5426;
+    margin-top: 30px;
+    width: 1000px;
+    height: 250px;
+    margin-left: 145px;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.sho_img{
+    background-color: #56df5426;
+    width: 800px;
+    margin-top: 40px;
+    margin-left: 145px;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+#shw_img{
+    height: 250px;
+    position: absolute;
+    top: 700px;
+    margin-left: 950px;
+}
+.temp_dv{
+    background-color: #56df5426;
+    margin-top: 100px;
+    width: 1180px;
+    margin-left: 160px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px 10px;
 
+}
+.prdct_dep{
+    width: 1000px;
+    height: 230px;
+    margin-left: 250px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.des_div{
+    position: absolute;
+    width: 200px;
+    height: 192px;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.des_div:hover{
+    transform: scale(1.1);
+}
+.devlop_div{
+    position: absolute;
+    width: 200px;
+    margin-left: 265px;
+    height: 192px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.devlop_div:hover{
+    transform: scale(1.1);
+}
+.markt_div{
+    position: absolute;
+    width: 200px;
+    margin-left: 509px;
+    height: 192px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.markt_div:hover{
+    transform: scale(1.1);
+}
+.buss_div{
+    width: 200px;
+    margin-left: 757px;
+    height: 192px;
+    margin-top: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+.buss_div:hover{
+    transform: scale(1.1);
+}
+#dsg_im{
+    height: 200px;
+}
+#dev_im{
+    height: 200px;
+}
+#mar_im{
+    height: 200px;
+}
+#bus_im{
+    height: 200px;
+}
+#dsg_p{
+    margin-left: 80px;
+}
+#ttl_tmp{
+    position: absolute;
+    font-size: 20px;
+    margin-top: 65px;
+    margin-left: 165px;
+}
+.new_pst{
+    background-color: #56df5426;
+    border-radius: 5px;
+    width: 100px;
+    padding: 4px 37px;
+    margin-left: 160px;
 
+}
+#txt_new{
+    margin-left: 160px;
+    margin-top: 20px;
+}
+.dsgn{
+    height: 300px;
+    width: 1150px;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+#ds_ttl{
+    margin-left: 205px;
+    position: absolute;
+    font-size: 20px;
+    margin-top: 60px;
+}
+.devop{
+    height: 300px;
+    width: 1150px;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+.mrktng{
+    height: 300px;
+    width: 1150px;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+.busns{
+    height: 300px;
+    width: 1150px;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+.dsgn_usrone{
+    width: 300px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 250px;
+}
+.dsgn_usrone:hover{
+    transform: scale(1.1);
+}
+.dsgn_usrtwo{
+    width: 300px;
+    position: absolute;
+    margin-left: 425px;
+    margin-top: 20px;
+    height: 250px;
+}
+.dsgn_usrtwo:hover{
+    transform: scale(1.1);
+}
+.dsgn_usrthree{
+    width: 300px;
+    position: absolute;
+    margin-left: 830px;
+    margin-top: 20px;
+    height: 250px;
+}
+.dsgn_usrthree:hover{
+    transform: scale(1.1);
+}
+#temp_one{
+    height: 150px;
+    width: 300px;
+}
+
+#temp_two{
+    height: 150px;
+    width: 300px;
+}
+
+#temp_three{
+    height: 150px;
+    width: 300px;
+}
+#icn_al{
+    margin-left: 178px;
+    margin-top: 62px;
+    position: absolute;
+}

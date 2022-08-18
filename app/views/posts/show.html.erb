@@ -1,12 +1,22 @@
 <div class="menu-bar">
-   <a href="/signin"> <i id="prim" class='bx bx-user-pin'></i></a>
-    <%= image_tag('SKED.png',alt: "", id: "skd") %>
+
+    <a href="/homes/index"><%= image_tag('SKED.png',alt: "", id: "skd") %></a>
     <div class="container">
-      <form class="search-bar">
-          <input type="text" placeholder="Search" name="q">
+      <form class="search-bar" role="search" action="/search">
+          <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
           <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
   </button>
       </form>
+       
+       <% logged_user = User.find(session[:current_user_id]) %>
+       <a id="usicb" class="ace" href="/signout">Logout</a>
+      
+        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+      
+       
+       
+        <b><label class="user-name"><%= logged_user["name"] %></label></b>
+
   </div>
       <ul>
         <li>
@@ -23,12 +33,10 @@
          <B> <a href="#">Solution</a>  </B>
                <div class="sub-menu-1">
                 <ul>
-                  <li><a href="#">Marketing</a></li>
-                  <li><a href="#">Product</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Testing</a></li>
-                  <li><a href="#">Automation</a></li>
-                  <li><a href="#">Development</a></li>
+                  <li><a href="/posts">Design</a></li>
+                  <li><a href="/posts">Development</a></li>
+                  <li><a href="/posts">Marketing</a></li>
+                  <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
                  <B> <a href="#">Resources</a> </B>
@@ -49,8 +57,8 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<p id="tmp_nam">
+  <strong>Template Name:</strong>
   <%= @post.title %>
 </p>
 
@@ -60,25 +68,39 @@
  <% end %>
 </p>
 
-<p>
-  <strong>Body:</strong>
+<p id="bdy_txt">
+  <strong>About this template:</strong>
   <%= @post.body %>
 </p>
 
+<div class="sho_img">
 <% if @post.files.any? %>
-  <h3> Attachments : </h3>
+  <h3> Project Template : </h3>
   <ul>
   <% @post.files.each do |file| %>
-  <%= image_tag file %>
-  <li>
+  <%= image_tag file , class:"sh_img" %>
+  <%# <li>
      <% link_to file.filename, rails_blob_path(file, disposition: :attachment) %>
-     <%= link_to 'Remove', delete_file_post_url(file.id), method: :delete, data: {confirm: 'Are you sure?'} %>
-     </li>
+     <%# <%= link_to 'Remove', delete_file_post_url(file.id), method: :delete, data: {confirm: 'Are you sure?'} %>
+     <%# </li> %> 
      </ul>
      <%end%>
      <%end%>
 
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</div>
+
+  <%= image_tag('sho-img.webp',alt: "", id: "shw_img") %>
+
+
+  <script>
+ 
+
+  function log(){
+    console.log("work")
+    var log = document.getElementById("usicn");
+  var log_a = document.getElementById("usicb");
+  log_a.classList.toggle("acea")
+
+  }
+</script>

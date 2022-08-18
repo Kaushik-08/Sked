@@ -1,12 +1,22 @@
 <div class="menu-bar">
-   <a href="/signin"> <i id="prim" class='bx bx-user-pin'></i></a>
-    <%= image_tag('SKED.png',alt: "", id: "skd") %>
+
+    <a href="/homes/index"><%= image_tag('SKED.png',alt: "", id: "skd") %></a>
     <div class="container">
-      <form class="search-bar">
-          <input type="text" placeholder="Search" name="q">
+      <form class="search-bar" role="search" action="/search">
+          <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
           <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
   </button>
       </form>
+       
+       <% logged_user = User.find(session[:current_user_id]) %>
+       <a id="usicb" class="ace" href="/signout">Logout</a>
+      
+        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+      
+       
+       
+        <b><label class="user-name"><%= logged_user["name"] %></label></b>
+
   </div>
       <ul>
         <li>
@@ -23,12 +33,10 @@
          <B> <a href="#">Solution</a>  </B>
                <div class="sub-menu-1">
                 <ul>
-                  <li><a href="#">Marketing</a></li>
-                  <li><a href="#">Product</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Testing</a></li>
-                  <li><a href="#">Automation</a></li>
-                  <li><a href="#">Development</a></li>
+                  <li><a href="/posts">Design</a></li>
+                  <li><a href="/posts">Development</a></li>
+                  <li><a href="/posts">Marketing</a></li>
+                  <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
                  <B> <a href="#">Resources</a> </B>
@@ -44,21 +52,135 @@
 
 <p id="notice"><%= notice %></p>
 
-<div class="">
-  <div class="">
+<div class="prdct_dep">
+<div class="des_div">
+<%= image_tag('design-temp.webp',alt: "", id: "dsg_im") %>
+ <b><p id="dsg_p">Design</p></b>
+</div>
+<div class="devlop_div">
+ <%= image_tag('develop-temp.webp',alt: "", id: "dev_im") %>
+ <b><p id="dsg_p">Development</p></b>
+</div>
+<div class="markt_div">
+ <%= image_tag('marketing-temp.webp',alt: "", id: "mar_im") %>
+ <b><p id="dsg_p">Marketing</p></b>
+</div>
+<div class="buss_div">
+ <%= image_tag('business-temp.webp',alt: "", id: "bus_im") %>
+ <b><p id="dsg_p">Business</p></b>
+</div>
+</div>
+
+<b><p id="ttl_tmp">New and notable templates</p></b>
+  <div class="temp_dv">
  
     <% @posts.each do |post| %>
-       <p class="">
-        <%= post.title %>
+    <%= post.title %>
+       <p>
        <%= post.body %>
-        <%= link_to 'Show', post, class:"" %>
+        <%= link_to 'More. . .', post, class:"pst_sho" %>
         <%# <%= link_to 'Edit', edit_post_path(post) %>
        <%# <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> 
       </p>
     <% end %>
     </div>
-    </div>
- 
-<br>
+ <b><p id="txt_new">Need to add your template</p></b>
+<div class="new_pst">
+<%= link_to 'Yes', new_post_path %>
+</div>
 
-<%= link_to 'New Post', new_post_path %>
+ <b><i class='bx bx-edit' id="icn_al"></i><p id="ds_ttl">Design</p></b>
+<div class="dsgn">
+<div class="dsgn_usrone">
+ <%= image_tag('dsg-temone.jpg',alt: "", id: "temp_one") %>
+ <p>An easy to use template for planning and monitoring your branding and product design projects online.</p>
+</div>
+
+<div class="dsgn_usrtwo">
+  <%= image_tag('dsg-temtwo.jpg',alt: "", id: "temp_two") %>
+  <p>A design system unites product teams around a common visual language. It reduces the design debt.</p>
+</div>
+
+<div  class="dsgn_usrthree">
+  <%= image_tag('dsg-temthree.jpg',alt: "", id: "temp_three") %>
+  <p>This board can serve as a great template to track grant funding opportunities for your non profit organization or social enterprise.</p>
+</div>
+
+</div>
+
+ <b><i class='bx bx-code-alt' id="icn_al"></i><p id="ds_ttl">Development</p></b>
+<div class="devop">
+  
+  <div class="dsgn_usrone">
+  <%= image_tag('devop-temone.webp',alt: "", id: "temp_one") %>
+ <p>This was also helpful for me to make and check that there weren't too many assignments stacking up in a particular week with the revised schedule.</p>
+</div>
+
+<div class="dsgn_usrtwo">
+  <%= image_tag('devop-temtwo.jfif',alt: "", id: "temp_two") %>
+  <p>The Scrum Board by Corrello is a Template for a Software Development team following a Scrum process.</p>
+</div>
+
+<div class="dsgn_usrthree">
+   <%= image_tag('devop-temthree.jfif',alt: "", id: "temp_three") %>
+  <p>Template for software development team to organize, manage tasks, manage deadlines and features for their software development projects.
+
+</p>
+</div>
+
+</div>
+
+ <b><i class='bx bxs-zap' id="icn_al"></i><p id="ds_ttl">Marketing</p></b>
+<div class="mrktng">
+
+<div class="dsgn_usrone">
+ <%= image_tag('markt-temone.png',alt: "", id: "temp_one") %>
+ <p>Use this board with your marketing team to run smooth weekly team meetings and keep everybody on the same page with the status of projects. You'll also...</p>
+</div>
+
+<div class="dsgn_usrtwo">
+ <%= image_tag('markt-temtwo.jpg',alt: "", id: "temp_two") %>
+  <p>With a marketing content catalog, you can centralize all the content your teams create and make it easily searchable.</p>
+</div>
+
+<div class="dsgn_usrthree">
+   <%= image_tag('markt-temthree.png',alt: "", id: "temp_three") %>
+  <p>Regardless if you are a professional speaker and you do this dozen times per week, or you are just getting ready for your first public presentation, </p>
+</div>
+  
+</div>
+
+ <b><i class='bx bxs-business' id="icn_al"></i><p id="ds_ttl">Business</p></b>
+<div class="busns">
+
+<div class="dsgn_usrone">
+  <%= image_tag('busi-temone.webp',alt: "", id: "temp_one") %>
+ <p>Copy this template and after authorizing the Crmble Power-up, just create a Crmble Team to organize your boards and users</p>
+</div>
+
+<div class="dsgn_usrtwo">
+ <%= image_tag('busi-temtwo.jfif',alt: "", id: "temp_two") %>
+  <p>Lean Canvas is a 1-page business plan template created by Ash Maurya that helps you deconstruct your idea into its key assumptions.</p>
+</div>
+
+<div class="dsgn_usrthree">
+   <%= image_tag('busi-temthree.jpg',alt: "", id: "temp_three") %>
+  <p>This board can serve as a great template to track grant funding opportunities for your non profit organization or social enterprise.</p>
+</div>
+  
+</div>
+  
+</div>
+
+
+<script>
+ 
+
+  function log(){
+    console.log("work")
+    var log = document.getElementById("usicn");
+  var log_a = document.getElementById("usicb");
+  log_a.classList.toggle("acea")
+
+  }
+</script>
