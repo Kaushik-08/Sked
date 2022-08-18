@@ -414,5 +414,42 @@ i:hover{
   cursor: pointer;
   opacity: 0.4;
 }
-
+.ttl_src{
+  margin-left: 100px;
+  font-size: 30px;
+}
+.src_dv{
+  width: 500px;
+  /* height: 600px; */
+  margin-left: 150px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+#ttl_src{
+  font-size: 20px;
+}
+#src-im{
+  margin-left: 800px;
+  position: absolute;
+  top: 170px;
+}
+#temp_txt{
+  width: 300px;
+  height: 100px;
+  margin-left: 200px;
+  margin-top: 350px;
+  padding: 10px 10px;
+  font-size: 30px;
+}
+#tem_go{
+  position: absolute;
+  margin-left: 377px;
+  top: 594px;
+  font-size: 20px;
+  color: #000;
+}
+#tem_go:hover{
+  transition: calc();
+  color: #4EBA92;
+}
 

@@ -1,25 +1,31 @@
 <div class="menu-bar">
 
-    <%= image_tag('SKED.png',alt: "", id: "skd") %>
+    <a href="/homes/index"><%= image_tag('SKED.png',alt: "", id: "skd") %></a>
     <div class="container">
       <form class="search-bar" role="search" action="/search">
-          <input type="text" placeholder="Search" name="q">
+          <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
           <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
   </button>
       </form>
-
+       
        <% logged_user = User.find(session[:current_user_id]) %>
-  <i id="usicn" class='bx bx-user-pin'></i>
+       <a id="usicb" class="ace" href="/signout">Logout</a>
+      
+        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+      
+       
+       
         <b><label class="user-name"><%= logged_user["name"] %></label></b>
+
   </div>
       <ul>
         <li>
          <B> <a href="#">Features</a>  </B>
           <div class="sub-menu-1">
             <ul>
-              <li><a href="#">Templates</a></li>
+              <li><a href="/posts">Templates</a></li>
               <li><a href="#">Automation</a></li>
-              <li><a href="#">Views</a></li>
+              <li><a href="/homes/views">Views</a></li>
             </ul>
           </div>
         </li>
@@ -27,19 +33,16 @@
          <B> <a href="#">Solution</a>  </B>
                <div class="sub-menu-1">
                 <ul>
-                  <li><a href="#">Marketing</a></li>
-                  <li><a href="#">Product</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Testing</a></li>
-                  <li><a href="#">Automation</a></li>
-                  <li><a href="#">Development</a></li>
+                  <li><a href="/posts">Design</a></li>
+                  <li><a href="/posts">Development</a></li>
+                  <li><a href="/posts">Marketing</a></li>
+                  <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
                  <B> <a href="#">Resources</a> </B>
                       <div class="sub-menu-1">
                         <ul>
                           <li><a href="#">Guide</a></li>
-                          <li><a href="#">Blog</a></li>
                         </ul>
                       </div>
             </div>
@@ -52,11 +55,11 @@
         <b><p id="wrbrd"> Boards </p></b>
         </a>
 
-        <a href=""><i id="lyot" class='bx bxs-layout'></i></i>
+        <a href="/posts"><i id="lyot" class='bx bxs-layout'></i></i>
         <b><p id="wrtemp"> Templates </p></b>
         </a>
 
-         <a href=""><i id="homic" class='bx bxs-home-smile'></i>
+         <a href="/homes/index"><i id="homic" class='bx bxs-home-smile'></i>
         <b><p id="wrhom"> Home </p></b>
         </a>
 
@@ -66,7 +69,7 @@
         </label></b>
         <input type="checkbox" id="btnnn">
          <ul class="menu">
-              <li><a href="#"> Board </a></li>
+              <li><a href=""> Board </a></li>
             <li>
                 <label for="btnnn-2" class="first">Highlights
                     <span class="fas fa-caret-down"></span>
@@ -137,3 +140,15 @@
 
 
 <%= javascript_pack_tag 'new.js' %> 
+
+<script>
+ 
+
+  function log(){
+    console.log("work")
+    var log = document.getElementById("usicn");
+  var log_a = document.getElementById("usicb");
+  log_a.classList.toggle("acea")
+
+  }
+</script>

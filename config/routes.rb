@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'homes/main'
   get 'boards/userbord'
   get 'homes/views'
+  get 'homes/index'
   resources :default_images
   match '/boards', to: 'boards#create', via: :post
   # resources :boards
@@ -22,14 +23,16 @@ Rails.application.routes.draw do
   # resources :boards
   get '/users/new', to: 'users#create'
   match '/users', to: 'users#create', via: :post
-  get 'signin', to: 'sessions#new', as: :new_sessions
+  
 
   get '/background/:id', to: 'boards#background', as: :background
   post '/background', to: 'boards#new_background'
 
   match '/new_task/:id', to: 'boards#new_task', via: :post
-  post 'signin', to: 'sessions#create', as: :sessions
-  delete 'signout', to: 'sessions#destroy', as: :destroy_session
+
+  get '/signin', to: 'sessions#new', as: :new_sessions
+  post '/signin', to: 'sessions#create', as: :sessions
+  get '/signout', to: 'sessions#destroy', as: :destroy_session
 
   get 'search', to: 'homes#search'
 

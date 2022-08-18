@@ -2,14 +2,14 @@
         <div class="blur"></div>
         <div class="text center">
                 <%= image_tag( @bg_image,class: "bimg")%>
-
         </div>
       </div>
 
 
     <div class="nav_blur">
 
-        <%= image_tag('SKED.png',alt: "", id: "brdim") %>
+        <a href="/homes/index"><%= image_tag('SKED -wht.png',alt: "", id: "brdim") %></a>
+
 
         <div class="nav_lst">
             <b><a id="nav_wrd"> Starred </a></b>
@@ -17,12 +17,19 @@
             <button id="crt_bttn"><b>  Create </b></button>
             <i class='bx bx-bell' id="not_icm"></i>
             <i id="prfic" class='bx bx-user-pin'></i>
+             <i class='bx bx-star' id="hig_str"></i>
+
+             <div class="star_dv" id="pop_div">
+                  <a id="close-btn" > <i class='bx bx-x' id="clo_btn"></i> </a>
+               <%= image_tag('starred-board.svg',alt: "", id: "brd_str") %>
+               <b><p id="str_txt">Star important boards to access them quickly and easily.</p></b>
+             </div>
         </div>
     </div>  
 
 
     <div class="dragdrp">
-    
+   
        <!-- modal -->
    <div class="modal" id="todo_form">
     <div class="header">
