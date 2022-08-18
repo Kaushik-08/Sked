@@ -51,7 +51,12 @@
     </p>
   </div>
   <div class="frame">
+  <% if @presence == 1%>
     <a href="/boards/new"><button class="custom-btn btn-3"><span>Explore</span></button></a>
+
+    <% else %>
+    <a href="/signin"><button class="custom-btn btn-3"><span>Explore</span></button></a>
+    <% end %>
   </div>
     <%= image_tag('task-man.webp',alt: "", id: "tskim") %>
   <div id="nxtx">
