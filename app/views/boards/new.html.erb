@@ -4,23 +4,23 @@
     <div class="container">
       <form class="search-bar" role="search" action="/search">
           <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
-          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+          <button type="submit"><em class="fa fa-search" aria-hidden="true"></em>
   </button>
       </form>
        
        <% logged_user = User.find(session[:current_user_id]) %>
        <a id="usicb" class="ace" href="/signout">Logout</a>
       
-        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+        <em id="usicn" class='bx bx-user-pin' onclick="log()"></em>
       
        
        
-        <b><label class="user-name"><%= logged_user["name"] %></label></b>
+        <strong><label class="user-name"><%= logged_user["name"] %></label></strong>
 
   </div>
       <ul>
         <li>
-         <B> <a href="#">Features</a>  </B>
+         <strong> <a href="#">Features</a>  </strong>
           <div class="sub-menu-1">
             <ul>
               <li><a href="/posts">Templates</a></li>
@@ -30,7 +30,7 @@
           </div>
         </li>
         <li>
-         <B> <a href="#">Solution</a>  </B>
+         <strong> <a href="#">Solution</a>  </strong>
                <div class="sub-menu-1">
                 <ul>
                   <li><a href="/posts">Design</a></li>
@@ -39,7 +39,7 @@
                   <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
-                 <B> <a href="#">Resources</a> </B>
+                 <strong> <a href="#">Resources</a> </strong>
                       <div class="sub-menu-1">
                         <ul>
                           <li><a href="#">Guide</a></li>
@@ -51,22 +51,22 @@
     </div>
 
     <div class="siddv">
-        <a href=""><i id="bord" class='bx bxs-dashboard'></i>
-        <b><p id="wrbrd"> Boards </p></b>
+        <a href=""><em id="bord" class='bx bxs-dashboard'></em>
+        <strong><p id="wrbrd"> Boards </p></strong>
         </a>
 
-        <a href="/posts"><i id="lyot" class='bx bxs-layout'></i></i>
-        <b><p id="wrtemp"> Templates </p></b>
+        <a href="/posts"><em id="lyot" class='bx bxs-layout'></em></em>
+        <strong><p id="wrtemp"> Templates </p></strong>
         </a>
 
-         <a href="/homes/index"><i id="homic" class='bx bxs-home-smile'></i>
-        <b><p id="wrhom"> Home </p></b>
+         <a href="/homes/index"><em id="homic" class='bx bxs-home-smile'></em>
+        <strong><p id="wrhom"> Home </p></strong>
         </a>
 
          <nav>
-        <b><label for="btnnn"  class="buttonnn"> Web Hosting 
+        <strong><label for="btnnn"  class="buttonnn"> Web Hosting 
             <span id="drdwn" class="fas fa-caret-down"></span>
-        </label></b>
+        </label></strong>
         <input type="checkbox" id="btnnn">
          <ul class="menu">
               <li><a href=""> Board </a></li>
@@ -85,17 +85,17 @@
 
         <div class="brodv" id="popup-div">
        
-        <b><p id="crtbor">
+        <strong><p id="crtbor">
             Create board   
-        </p></b>
-       <a id="close-btn" > <i class='bx bx-x' id="clsic"></i> </a>
+        </p></strong>
+       <a id="close-btn" > <em class='bx bx-x' id="clsic"></em> </a>
         <hr id="lne">
         <form action="/background" method="post">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
           <div class="brd-div">
-          <b><p id="bgim">
+          <strong><p id="bgim">
             Background
-          </p></b>
+          </p></strong>
           <input id="marrdo" type="radio" name="bg" value="Marketing">
           <%= image_tag('Marketing.jpg',alt: "", id: "marim") %>
           <input id="prordo" type="radio" name="bg" value="programer">
@@ -126,10 +126,10 @@
     </div>
 
         <div class="rgtdv">  
-        <b><p id="lnk">
+        <strong><p id="lnk">
           Connect
-        </p></b>  
-        <a id="create-btn"><i id="lnicn" class='bx bx-link'></i><p id="crbrd">
+        </p></strong>  
+        <a id="create-btn"><em id="lnicn" class='bx bx-link'></em><p id="crbrd">
           Create a board  
         </p><a>
     </div>  

@@ -12,29 +12,29 @@
   <% end %>
 
 <div class="pst-div">
-<b><p id="pst-tie">Add Your Post Here</p></b>
+<strong><p id="pst-tie">Add Your Post Here</p></strong>
 
 <%= image_tag('post-div-img.png',alt: "", id: "pst4-img") %>
 
   <div class="field">
-    <b><%= form.label :title, class:"ttl_pst"%></b>
+    <strong><%= form.label :title, class:"ttl_pst"%></strong>
     <%= form.text_field :title , class:"frm_pst"%>
   </div>
 
 
  <div class="field">
-   <b><%= form.label :header_image, class:"hed_img" %></b>
+   <strong><%= form.label :header_image, class:"hed_img" %></strong>
    <%= form.file_field :header_image , class:"fle_head" %>
  </div>
 
   <div class="body_fld">
-    <b><%= form.label :body, class:"bod_tx" %></b>
+    <strong><%= form.label :body, class:"bod_tx" %></strong>
     <%= form.text_area :body,class:"bd_txt" %>
   </div>
 
   
  <div class="field">
-   <b><%= form.label :files, class:"fld_inp" %></b>
+   <strong><%= form.label :files, class:"fld_inp" %></strong>
    <%= form.file_field :files, multiple: true ,class:"fld_txt"%>
  </div>
 
