@@ -4,23 +4,23 @@
     <div class="container">
       <form class="search-bar" role="search" action="/search">
           <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
-          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+          <button type="submit"><em class="fa fa-search" aria-hidden="true"></em>
   </button>
       </form>
        
        <% logged_user = User.find(session[:current_user_id]) %>
        <a id="usicb" class="ace" href="/signout">Logout</a>
       
-        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+        <em id="usicn" class='bx bx-user-pin' onclick="log()"></em>
       
        
        
-        <b><label class="user-name"><%= logged_user["name"] %></label></b>
+        <strong><label class="user-name"><%= logged_user["name"] %></label></strong>
 
   </div>
       <ul>
         <li>
-         <B> <a href="#">Features</a>  </B>
+         <strong> <a href="#">Features</a>  </strong>
           <div class="sub-menu-1">
             <ul>
               <li><a href="/posts">Templates</a></li>
@@ -30,7 +30,7 @@
           </div>
         </li>
         <li>
-         <B> <a href="#">Solution</a>  </B>
+         <strong> <a href="#">Solution</a>  </strong>
                <div class="sub-menu-1">
                 <ul>
                   <li><a href="/posts">Design</a></li>
@@ -39,7 +39,7 @@
                   <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
-                 <B> <a href="#">Resources</a> </B>
+                 <strong> <a href="#">Resources</a> </strong>
                       <div class="sub-menu-1">
                         <ul>
                           <li><a href="#">Guide</a></li>
@@ -55,23 +55,23 @@
 <div class="prdct_dep">
 <div class="des_div">
 <%= image_tag('design-temp.webp',alt: "", id: "dsg_im") %>
- <b><p id="dsg_p">Design</p></b>
+ <strong><p id="dsg_p">Design</p></strong>
 </div>
 <div class="devlop_div">
  <%= image_tag('develop-temp.webp',alt: "", id: "dev_im") %>
- <b><p id="dsg_p">Development</p></b>
+ <strong><p id="dsg_p">Development</p></strong>
 </div>
 <div class="markt_div">
  <%= image_tag('marketing-temp.webp',alt: "", id: "mar_im") %>
- <b><p id="dsg_p">Marketing</p></b>
+ <strong><p id="dsg_p">Marketing</p></strong>
 </div>
 <div class="buss_div">
  <%= image_tag('business-temp.webp',alt: "", id: "bus_im") %>
- <b><p id="dsg_p">Business</p></b>
+ <strong><p id="dsg_p">Business</p></strong>
 </div>
 </div>
 
-<b><p id="ttl_tmp">New and notable templates</p></b>
+<strong><p id="ttl_tmp">New and notable templates</p></strong>
   <div class="temp_dv">
  
     <% @posts.each do |post| %>
@@ -84,12 +84,12 @@
       </p>
     <% end %>
     </div>
- <b><p id="txt_new">Need to add your template</p></b>
+ <strong><p id="txt_new">Need to add your template</p></strong>
 <div class="new_pst">
 <%= link_to 'Yes', new_post_path %>
 </div>
 
- <b><i class='bx bx-edit' id="icn_al"></i><p id="ds_ttl">Design</p></b>
+ <strong><em class='bx bx-edit' id="icn_al"></em><p id="ds_ttl">Design</p></strong>
 <div class="dsgn">
 <div class="dsgn_usrone">
  <%= image_tag('dsg-temone.jpg',alt: "", id: "temp_one") %>
@@ -108,7 +108,7 @@
 
 </div>
 
- <b><i class='bx bx-code-alt' id="icn_al"></i><p id="ds_ttl">Development</p></b>
+ <strong><em class='bx bx-code-alt' id="icn_al"></em><p id="ds_ttl">Development</p></strong>
 <div class="devop">
   
   <div class="dsgn_usrone">
@@ -130,7 +130,7 @@
 
 </div>
 
- <b><i class='bx bxs-zap' id="icn_al"></i><p id="ds_ttl">Marketing</p></b>
+ <strong><em class='bx bxs-zap' id="icn_al"></em><p id="ds_ttl">Marketing</p></strong>
 <div class="mrktng">
 
 <div class="dsgn_usrone">
@@ -150,7 +150,7 @@
   
 </div>
 
- <b><i class='bx bxs-business' id="icn_al"></i><p id="ds_ttl">Business</p></b>
+ <strong><em class='bx bxs-business' id="icn_al"></em><p id="ds_ttl">Business</p></strong>
 <div class="busns">
 
 <div class="dsgn_usrone">

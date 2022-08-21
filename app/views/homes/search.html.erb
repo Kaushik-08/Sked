@@ -4,23 +4,23 @@
     <div class="container">
       <form class="search-bar" role="search" action="/search">
           <input type="text" placeholder="Search" required pattern=".*\S+.*" title="Search field cannot be Blank" name="q">
-          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+          <button type="submit"><em class="fa fa-search" aria-hidden="true"></em>
   </button>
       </form>
        
        <% logged_user = User.find(session[:current_user_id]) %>
        <a id="usicb" class="ace" href="/signout">Logout</a>
       
-        <i id="usicn" class='bx bx-user-pin' onclick="log()"></i>
+        <em id="usicn" class='bx bx-user-pin' onclick="log()"></em>
       
        
        
-        <b><label class="user-name"><%= logged_user["name"] %></label></b>
+        <strong><label class="user-name"><%= logged_user["name"] %></label></strong>
 
   </div>
       <ul>
         <li>
-         <B> <a href="#">Features</a>  </B>
+         <strong> <a href="#">Features</a>  </strong>
           <div class="sub-menu-1">
             <ul>
               <li><a href="/posts">Templates</a></li>
@@ -30,7 +30,7 @@
           </div>
         </li>
         <li>
-         <B> <a href="#">Solution</a>  </B>
+         <strong> <a href="#">Solution</a>  </strong>
                <div class="sub-menu-1">
                 <ul>
                   <li><a href="/posts">Design</a></li>
@@ -39,7 +39,7 @@
                   <li><a href="/posts">Business</a></li>
                 </ul>
                 <li>
-                 <B> <a href="#">Resources</a> </B>
+                 <strong> <a href="#">Resources</a> </strong>
                       <div class="sub-menu-1">
                         <ul>
                           <li><a href="#">Guide</a></li>

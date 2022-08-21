@@ -4,20 +4,20 @@
 <%= form_with url:'/signin' do |form|%>
 <div class="logdv">
 <div class="inple">
-<label><b><p>Email</p></b></label>
+<label><strong><p>Email</p></strong></label>
 <% if flash[:error]%><p class = "flash-errors"><%= flash[:error]%></p><%end%>
 <%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="usnam" required >  %>
 <%= form.email_field "user[email]", autofocus: true,id: "usnam" %>
-<label><b><p id="pswd">Password</p></b></label>
+<label><strong><p id="pswd">Password</p></strong></label>
 <%# <input pattern="[A-Za-z]{1,20}" type="text" name="" value="" id="pasnam" required >  %>
 <%= form.password_field "user[password]", id: "pasnam"%>
-<b><a  id="fopass" href=""> Forgot Password ? </a></b>
+<strong><a  id="fopass" href=""> Forgot Password ? </a></strong>
 <div class="frm">
     <%= form.submit "Login", class:"custo-btn bt-3"%>
     <%# <button class="custom-btn btn-3"><span>Login</span></button> %>
   </div>
-    <b><a id="nxtpg" href="/users/new"> SignUp </a></b>
- <b> <p id="acsin">Don’t have an account?</p></b>
+    <strong><a id="nxtpg" href="/users/new"> SignUp </a></strong>
+ <strong> <p id="acsin">Don’t have an account?</p></strong>
 </div>
 </div>
 <%end%>
