@@ -29,12 +29,6 @@ function closeModalHandler() {
 closeModalBtn.addEventListener("click", closeModalHandler)
 
 
-// window.onkeydown = function (e){
-//     if (e.keyCode === 27) {
-//         closeModalHandler()
-//     }
-// }
-
 let idNumber = 0;
 function createElem() {
 
@@ -74,7 +68,6 @@ function removeHandler(e) {
 }
 
 function addTodoElemHandler() {
-    // e.preventDefault();
     createElem()
 
     const todos = $.querySelectorAll('.todo')
@@ -112,11 +105,11 @@ statusdrop.forEach(function (status) {
 
 function dragEnterHandler(e) {
     e.currentTarget.classList.add('drop');
-};
+}
 
 function dragLeaveHandler(e) {
     e.currentTarget.classList.remove('drop');
-};
+}
 
 function dragOverHandler(e) {
     e.preventDefault();
@@ -149,11 +142,3 @@ function close_div(){
     popup_div.style.display = 'none';
 }
 
-// function appendTask(status,task,task_id){
-//     console.log("appending");
-//     $(`#${status}`).append(
-//         `<div class="todo" draggable="true" id="item-${task_id}">
-//         <%= ${task} %><span class="close">×</span>
-//       </div>`
-//     )
-// }
