@@ -1,8 +1,5 @@
-# frozen_string_literal: true
 
 class BoardsController < ApplicationController
-  # def index
-  # end
   def new
     @bo = Board.all
   end
@@ -29,6 +26,7 @@ class BoardsController < ApplicationController
       # redirect_to '/boards/new'
       render plain: 'failed'
     end
+
   end
 
   def destroy
@@ -62,7 +60,8 @@ class BoardsController < ApplicationController
   end
 
   def new_task
-    task = TaskBoard.new(task: params[:task], board_id: params[:board_id], user_id: @current_user.id,status: "no_status")
+    alloted_mem_list = User.find_by_name(params[:allot_mem_id])
+    task = TaskBoard.new(task: params[:task], board_id: params[:board_id], user_id: @current_user.id,status: "no_status", users_id: alloted_mem_list.id)
     if task.save
       redirect_to background_path
     else
@@ -76,3 +75,6 @@ class BoardsController < ApplicationController
     params.require(:board).permit(:cover_picture)
   end
 end
+
+
+

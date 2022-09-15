@@ -2,6 +2,8 @@
         <div class="blur"></div>
         <div class="text center">
                 <%= image_tag( @bg_image,class: "bimg")%>
+
+                
         </div>
       </div>
 
@@ -39,11 +41,19 @@
     <form action="/new_task/<%= params[:id] %>" method="post" name="userboard">
             <input name="authenticity_token" type="hidden" value=" <%= form_authenticity_token %>">
 
-      <input type="text" name="task" id="todo_input" placeholder="Enter Task" />
-      <input type="submit" value="Add Task" id="todo_submit" title="Add Todo" />
+      <input type="text" name="task" class="todo_input" placeholder="Enter Task" >
+      <select id="alloted_member" name="allot_mem_id" class="todo_input">
+          <%User.all.each do|allot|%>
+          <option value="<%=allot.name%>"><%=allot.name%></option>
+          <%end%>
+      </select>
+      <input type="submit" value="Add Task" id="todo_submit" title="Add Todo" >
     </form>  
     </div>
+
   </div>
+
+
 
   <div class="todo-container">
     <div class="status" id="no_status">
@@ -53,7 +63,8 @@
           <div class="todo" draggable="true" id="item-<%= hi.id %>">
             <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
           </div>
-      <% end %>
+          <div  class="alloted_name" > <p id="name_allot">Task Assigned For : <i class='bx bx-user-circle' ></i></p> <p id="task_member"><%= User.find(hi.users_id).name %></p></div>
+          <%end%>
       <% end %>
       <button type="button" id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
 
@@ -63,22 +74,23 @@
       <% if @no_status %>
 
           <% @not_started.each do |hi| %>
-          <div class="todo" draggable="true" id="item-<%= hi.id %>">
+          <div class="todo" draggable="true" id="item-<%= hi.id %>">          
             <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
           </div>
-          <% end %>
+          <div  class="alloted_name" > <p id="name_allot">Task Assigned For : <i class='bx bx-user-circle' ></i></p> <p id="task_member"><%= User.find(hi.users_id).name %></p></div>
+           <% end %>
           <% end %>
 
     </div>
     <div class="status" id="in_progress">
       <h1>In Progress</h1>
       <% if @no_status %>
-
           <% @in_progress.each do |hi| %>
        <div class="todo" draggable="true" id="item-<%= hi.id %>">
            <a href="/delete/<%= hi.id %>"> <%= hi.task %><span class="close">×</span></a>
           </div>
-          <% end %>
+          <div  class="alloted_name" > <p id="name_allot">Task Assigned For : <i class='bx bx-user-circle' ></i></p> <p id="task_member"><%= User.find(hi.users_id).name %></p></div>
+           <% end %>
           <% end %>
 
       
@@ -90,13 +102,16 @@
           <div class="todo" draggable="true" id="item-<%= hi.id %>">
               <a href="/delete/<%= hi.id %>"><%= hi.task %><span class="close">×</span></a>
           </div>
+          <div  class="alloted_name" > <p id="name_allot">Task Assigned For : <i class='bx bx-user-circle' ></i></p> <p id="task_member"><%= User.find(hi.users_id).name %></p></div>
           <% end %>
           <% end %>
 
     </div>
+
   </div>
 
   <div id="overlay">hello</div>
+
 
     </div>
 
