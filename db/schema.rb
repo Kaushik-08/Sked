@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_18_100041) do
+ActiveRecord::Schema.define(version: 2022_09_09_101755) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2022_08_18_100041) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
+    t.bigint "users_id"
+    t.index ["users_id"], name: "index_task_boards_on_users_id"
   end
 
   create_table "user_bords", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -91,4 +93,5 @@ ActiveRecord::Schema.define(version: 2022_08_18_100041) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "boards", "users"
+  add_foreign_key "task_boards", "users", column: "users_id"
 end
